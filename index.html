@@ -3,23 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>520 I Love You ❤️</title>
+<title>Happy 520 Day ❤️</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family:'Segoe UI', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background: linear-gradient(135deg,#ff9a9e,#fad0c4,#fad0c4);
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4,#ffdde1);
     overflow-x:hidden;
     color:white;
 }
 
 /* Floating Hearts */
+
 .hearts{
     position:fixed;
     width:100%;
@@ -28,24 +34,27 @@ body{
     left:0;
     pointer-events:none;
     overflow:hidden;
+    z-index:1;
 }
 
 .hearts span{
     position:absolute;
-    display:block;
-    color:rgba(255,255,255,0.7);
-    animation:float 10s linear infinite;
     bottom:-100px;
+    animation:float 10s linear infinite;
+    color:rgba(255,255,255,0.8);
 }
 
 @keyframes float{
+
     0%{
         transform:translateY(0) scale(0);
         opacity:0;
     }
+
     50%{
         opacity:1;
     }
+
     100%{
         transform:translateY(-120vh) scale(1.5);
         opacity:0;
@@ -53,72 +62,114 @@ body{
 }
 
 /* Hero Section */
+
 .hero{
-    height:100vh;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:20px;
+    padding:30px;
     position:relative;
+    z-index:2;
 }
 
 .hero-content{
-    z-index:2;
     animation:fadeIn 2s ease;
+    max-width:900px;
 }
 
 .hero h1{
-    font-size:70px;
-    margin-bottom:20px;
+    font-size:75px;
+    margin-bottom:25px;
     text-shadow:0 0 15px rgba(255,255,255,0.8);
 }
 
-.hero p{
-    font-size:24px;
-    line-height:1.7;
-    max-width:800px;
+.hero-subtitle{
+    font-size:28px;
+    margin-bottom:25px;
+    color:#fff7f9;
 }
 
-.love-btn{
-    margin-top:35px;
+/* Typing Animation */
+
+#typing{
+    font-size:24px;
+    line-height:1.8;
+    border-right:3px solid white;
     display:inline-block;
-    padding:15px 35px;
+    white-space:pre-line;
+    overflow:hidden;
+    animation:blink 0.7s infinite;
+    padding-right:5px;
+}
+
+@keyframes blink{
+
+    50%{
+        border-color:transparent;
+    }
+}
+
+/* Button */
+
+.love-btn{
+    display:inline-block;
+    margin-top:40px;
+    padding:15px 40px;
     border-radius:50px;
+    text-decoration:none;
     background:white;
     color:#ff4f81;
-    text-decoration:none;
     font-size:20px;
     font-weight:bold;
     transition:0.4s;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
 .love-btn:hover{
-    transform:scale(1.1);
+    transform:scale(1.08);
     background:#ff4f81;
     color:white;
 }
 
+/* Spotify Section */
+
+.music-section{
+    padding:60px 20px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+.music-section h2{
+    font-size:45px;
+    margin-bottom:25px;
+}
+
 /* Slider */
+
 .slider-section{
     padding:80px 20px;
     text-align:center;
+    position:relative;
+    z-index:2;
 }
 
 .slider-section h2{
-    font-size:50px;
+    font-size:55px;
     margin-bottom:40px;
 }
 
 .slider{
     width:90%;
-    max-width:900px;
-    height:500px;
+    max-width:950px;
+    height:520px;
     margin:auto;
     position:relative;
     overflow:hidden;
     border-radius:25px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
 }
 
 .slide{
@@ -140,38 +191,47 @@ body{
 }
 
 /* Love Message */
+
 .message{
-    padding:100px 20px;
+    padding:100px 25px;
     text-align:center;
+    position:relative;
+    z-index:2;
 }
 
 .message h2{
     font-size:55px;
-    margin-bottom:25px;
+    margin-bottom:30px;
 }
 
 .message p{
     max-width:900px;
     margin:auto;
     font-size:24px;
-    line-height:1.9;
+    line-height:2;
 }
 
 /* Footer */
+
 footer{
     text-align:center;
-    padding:30px;
-    font-size:18px;
-    background:rgba(255,255,255,0.1);
+    padding:35px;
+    background:rgba(255,255,255,0.12);
     backdrop-filter:blur(5px);
+    font-size:18px;
+    position:relative;
+    z-index:2;
 }
 
-/* Animation */
+/* Fade */
+
 @keyframes fadeIn{
+
     from{
         opacity:0;
         transform:translateY(30px);
     }
+
     to{
         opacity:1;
         transform:translateY(0);
@@ -179,28 +239,34 @@ footer{
 }
 
 /* Responsive */
+
 @media(max-width:768px){
 
-.hero h1{
-    font-size:45px;
-}
+    .hero h1{
+        font-size:48px;
+    }
 
-.hero p{
-    font-size:18px;
-}
+    .hero-subtitle{
+        font-size:22px;
+    }
 
-.slider{
-    height:300px;
-}
+    #typing{
+        font-size:18px;
+    }
 
-.slider-section h2,
-.message h2{
-    font-size:35px;
-}
+    .slider{
+        height:300px;
+    }
 
-.message p{
-    font-size:18px;
-}
+    .slider-section h2,
+    .message h2,
+    .music-section h2{
+        font-size:35px;
+    }
+
+    .message p{
+        font-size:18px;
+    }
 
 }
 
@@ -210,90 +276,139 @@ footer{
 <body>
 
 <!-- Floating Hearts -->
+
 <div class="hearts">
-    <span style="left:10%; font-size:25px;">❤️</span>
-    <span style="left:20%; font-size:35px; animation-delay:2s;">💖</span>
-    <span style="left:35%; font-size:30px; animation-delay:4s;">💕</span>
-    <span style="left:50%; font-size:40px; animation-delay:1s;">💗</span>
-    <span style="left:65%; font-size:28px; animation-delay:6s;">❤️</span>
-    <span style="left:80%; font-size:38px; animation-delay:3s;">💘</span>
-    <span style="left:90%; font-size:25px; animation-delay:5s;">💞</span>
+
+<span style="left:5%; font-size:22px; animation-delay:0s;">❤️</span>
+<span style="left:15%; font-size:30px; animation-delay:2s;">💖</span>
+<span style="left:25%; font-size:25px; animation-delay:4s;">💕</span>
+<span style="left:40%; font-size:35px; animation-delay:1s;">💗</span>
+<span style="left:55%; font-size:28px; animation-delay:3s;">💘</span>
+<span style="left:70%; font-size:40px; animation-delay:5s;">💞</span>
+<span style="left:85%; font-size:26px; animation-delay:7s;">❤️</span>
+<span style="left:95%; font-size:32px; animation-delay:2s;">💓</span>
+
 </div>
 
 <!-- Hero -->
+
 <section class="hero">
-    <div class="hero-content">
-        <h1>Happy 520 Day ❤️</h1>
 
-        <p>
-            To my gorgeous girlfriend,<br><br>
-            You are the most beautiful part of my life.
-            Every moment with you feels magical,
-            every smile of yours melts my heart,
-            and every second I spend loving you
-            becomes my favorite memory.
-        </p>
+<div class="hero-content">
 
-        <a href="#gallery" class="love-btn">Our Beautiful Memories 💕</a>
-    </div>
+<h1>Happy 520 Day ❤️</h1>
+
+<div class="hero-subtitle">
+For My Gorgeous Girlfriend 💕
+</div>
+
+<p id="typing"></p>
+
+<a href="#gallery" class="love-btn">
+See Our Memories 📸
+</a>
+
+</div>
+
 </section>
 
-<!-- Slider -->
+<!-- Spotify Music -->
+
+<section class="music-section">
+
+<h2>Our Song 🎵</h2>
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6FA4tclcYjLmqeDgFsXOrz?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+</section>
+
+<!-- Photo Slider -->
+
 <section class="slider-section" id="gallery">
 
-    <h2>Our Love Story 📸</h2>
+<h2>Our Love Story 📸</h2>
 
-    <div class="slider">
+<div class="slider">
 
-        <div class="slide active">
-            <img src="IMG-20250909-WA0090.jpg">
-        </div>
+<div class="slide active">
+<img src="1.jpg">
+</div>
 
-        <div class="slide">
-            <img src="IMG-20250809-WA0050.jpg">
-        </div>
+<div class="slide">
+<img src="2.jpg">
+</div>
 
-        <div class="slide">
-            <img src="IMG20250909193452.jpg">
-        </div>
+<div class="slide">
+<img src="3.jpg">
+</div>
 
-        <div class="slide">
-            <img src="IMG-20250917-WA0035.jpg">
-        </div>
+<div class="slide">
+<img src="4.jpg">
+</div>
 
-    </div>
+</div>
 
 </section>
 
-<!-- Message -->
+<!-- Love Message -->
+
 <section class="message">
 
-    <h2>I Really Adore You 💖</h2>
+<h2>I Really Adore You 💖</h2>
 
-    <p>
-        Thank you for bringing happiness, warmth,
-        and endless love into my life.
-        You are not only my girlfriend,
-        but also my safe place, my happiness,
-        and the most precious person in my world.
-        <br><br>
-        No matter what happens,
-        I will always choose you,
-        love you,
-        and adore you more every single day.
-        <br><br>
-        Happy 520 Day, my love ❤️
-    </p>
+<p>
+Thank you for bringing happiness,
+warmth, and endless love into my life.
+You are not only my girlfriend,
+but also my safe place,
+my happiness,
+and the most precious person in my world.
+<br><br>
+No matter what happens,
+I will always choose you,
+love you,
+and adore you more every single day.
+<br><br>
+Happy 520 Day my love ❤️
+</p>
 
 </section>
 
 <footer>
-    Made with endless love 💕
+Made with endless love for you 💕
 </footer>
 
 <script>
 
-// Slider Effect
+/* Typing Animation */
+
+const text = `To my gorgeous girlfriend ❤️
+
+You are the most beautiful part of my life.
+Every moment with you feels magical,
+every smile of yours melts my heart,
+and every second with you becomes my favorite memory.
+
+Happy 520 Day my love 💕`;
+
+let i = 0;
+
+function typingEffect(){
+
+    if(i < text.length){
+
+        document.getElementById("typing").innerHTML += text.charAt(i);
+
+        i++;
+
+        setTimeout(typingEffect, 45);
+    }
+}
+
+typingEffect();
+
+/* Slider */
+
 const slides = document.querySelectorAll(".slide");
 
 let index = 0;
